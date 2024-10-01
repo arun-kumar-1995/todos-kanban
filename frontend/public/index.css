@@ -1,0 +1,103 @@
+/* CSS Reset */
+
+/* Remove default margin and padding */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set font size and family */
+html {
+  font-size: 100%;
+  line-height: 1.5;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  color: #212121;
+  width: 100%;
+}
+
+/* Remove list styles */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Remove links' default styles */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Set default heading styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+/* Set default styles for images */
+img {
+  max-width: 100%; /* Ensure images are responsive */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Remove inline space below images */
+}
+
+/* Reset table styles */
+table {
+  border-collapse: collapse; /* Merge borders of adjacent cells */
+  width: 100%; /* Set default table width */
+}
+
+/* Form elements */
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  margin: 0;
+}
+
+/* Reset default styles for form elements */
+button {
+  border: none;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+/* Prevent flashing of unstyled content */
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Ensure form inputs don't inherit unwanted styles */
+input[type="checkbox"],
+input[type="radio"] {
+  width: auto; /* Set width to auto for checkboxes and radio buttons */
+}
+
+/* Add a transition for form elements on focus */
+input,
+textarea,
+select,
+button {
+  border: none;
+  outline: none;
+}
+
+/* Specific reset for code elements */
+code {
+  font-family: monospace;
+}
