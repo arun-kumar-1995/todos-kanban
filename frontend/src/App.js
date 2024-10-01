@@ -1,11 +1,22 @@
-import React from "react";
-import logo from "./logo.jpg";
+import React, { Suspense } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import routes from "./routes"; // Import the route config
+import Loader from "./components/loader";
+
+
 
 const App = () => {
   return (
     <div>
-      <h1>Hello React with Webpack</h1>
-      <img src={logo} alt="Logo" />
+      <Router>
+        <Suspense fallback={<Loader />}>
+          <Routes>
+            {routes.map((route, index) => (
+              <Route key={index} path={route.path} element={route.element} />
+            ))}
+          </Routes>
+        </Suspense>
+      </Router>
     </div>
   );
 };
